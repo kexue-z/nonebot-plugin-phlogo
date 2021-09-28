@@ -2,6 +2,7 @@
 
 生成ph风格logo
 
+![nb](docs/png.png)
 # 安装
 
 直接使用 `pip install nonebot-plugin-phlogo` 进行安装
