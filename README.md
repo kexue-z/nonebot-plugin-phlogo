@@ -1,6 +1,6 @@
-# nonebot-plugin-heweather
+# nonebot-plugin-phlogo
 
-获取和风天气信息并转换为图片
+生成ph风格logo
 
 # 安装
 
