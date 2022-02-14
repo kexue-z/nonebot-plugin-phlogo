@@ -1,9 +1,8 @@
 import base64
 from io import BytesIO
-
+from nonebot.params import CommandArg
 from nonebot import on_command
-from nonebot.adapters.cqhttp import Bot, MessageEvent, MessageSegment
-from nonebot.typing import T_State
+from nonebot.adapters.onebot.v11 import MessageEvent, MessageSegment, Message
 from PIL import Image
 
 from .logo import make_logo
@@ -19,8 +18,8 @@ def img_to_b64(pic: Image.Image) -> str:
 
 
 @phlogo.handle()
-async def _(bot: Bot, event: MessageEvent):
-    msg = str(event.get_message()).split()
+async def _(event: MessageEvent, args: Message = CommandArg()):
+    msg = args.extract_plain_text().split()
     if len(msg) == 2:
         pic = img_to_b64(make_logo(msg[0], msg[1]))
         await phlogo.finish(MessageSegment.image(pic))
