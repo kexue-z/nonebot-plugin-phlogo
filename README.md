@@ -1,3 +1,6 @@
+# 已归档
+用这个 https://github.com/noneplugin/nonebot-plugin-memes
+
 # nonebot-plugin-phlogo
 
 生成ph风格logo
